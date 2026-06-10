@@ -1,12 +1,17 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
   title: 'EkoleDirect — Soutien scolaire en ligne au Bénin',
   description: 'Plateforme de soutien scolaire avec tuteur IA, suivant le programme béninois officiel. CEP, BEPC, BAC.',
   manifest: '/manifest.json',
+};
+
+export const viewport: Viewport = {
   themeColor: '#1a5c2a',
-  viewport: 'width=device-width, initial-scale=1, maximum-scale=1',
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
